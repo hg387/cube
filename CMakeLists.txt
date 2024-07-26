@@ -13,4 +13,4 @@ enable_testing()
 target_compile_features(rubrick_cube PUBLIC cxx_std_20)
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
-include(CPack)git 
+include(CPack)
