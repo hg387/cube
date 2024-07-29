@@ -76,3 +76,15 @@ TEST_F(CubeTest, RightRotationTest) {
     std::cout << D;
     EXPECT_EQ(0, 0);
 }
+
+TEST_F(CubeTest, BackRotationTest) {
+    B.rotateClockwise(U, L, D, R);
+    B.rotateAntiClockwise(U, L, D, R);
+    std::cout << U;
+    std::cout << L;
+    std::cout << F;
+    std::cout << R;
+    std::cout << B;
+    std::cout << D;
+    EXPECT_EQ(0, 0);
+}

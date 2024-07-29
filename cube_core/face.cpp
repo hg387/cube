@@ -129,7 +129,40 @@ struct F:Face<'F',N>
 template <size_t N>
 struct B:Face<'B',N>
 {
+    using Face<'B',N>::rotateFaceClockwise;
+    using Face<'B',N>::rotateFaceAntiClockwise;
 
+    void rotateClockwise(Face<'U',N>& u, Face<'L',N>& l, Face<'D',N>& d, Face<'R',N>& r){
+        rotateFaceClockwise();
+
+        //U -> L -> D -> R -> U
+
+        std::string tmp[N];
+        std::copy(std::begin(u.values[0]), std::end(u.values[0]), std::begin(tmp));
+        Face<'B',N>::template copyColToRow<'R','U'>(r, N-1, u, 0);
+        Face<'B',N>::template copyRowToColReverse<'D','R'>(d, N-1, r, N-1);
+        Face<'B',N>::template copyColToRow<'L','D'>(l, 0, d, N-1);
+        for (int i=0; i!=N; ++i){
+            l.values[N-1-i][0] = tmp[i];
+        }
+        
+    }
+
+    void rotateAntiClockwise(Face<'U',N>& u, Face<'L',N>& l, Face<'D',N>& d, Face<'R',N>& r){
+        rotateFaceAntiClockwise();
+
+        //U <- L <- D <- R <- U 
+
+        std::string tmp[N];
+        std::copy(std::begin(u.values[0]), std::end(u.values[0]), std::begin(tmp));
+        Face<'B',N>::template copyColToRowReverse<'L','U'>(l, 0, u, 0);
+        Face<'B',N>::template copyRowToCol<'D','L'>(d, N-1, l, 0);
+        Face<'B',N>::template copyColToRowReverse<'R','D'>(r, N-1, d, N-1);
+        for (int i=0; i!=N; ++i){
+            r.values[i][N-1] = tmp[i];
+        }
+        
+    }
 
 };
 
@@ -218,6 +251,20 @@ struct U:Face<'U',N>
     }
 };
 /*
+B Initial stage:
+
+        [0,2] [0,1] [0,0]
+
+    [0,2]               [0,0]
+    [1,2]               [0,1]
+    [2,2]               [0,2]
+
+        [2,2] [2,1] [2,0]
+
+B - Clockwise: U -> L -> D -> R -> U
+B - Anti-clockwise: U <- L <- D <- R <- U
+
+
 R Initial stage:
 
         [2,2] [1,2] [0,2]
