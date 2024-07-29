@@ -175,12 +175,6 @@ struct D:Face<'D',N>
 
     void rotateClockwise(Face<'F',N>& f, Face<'R',N>& r, Face<'B',N>& b, Face<'L',N>& l){
         rotateFaceClockwise();
-        
-        // std::string tmp[N] = f.values[N-1];
-        // f.values[N-1] = l.values[N-1];
-        // l.values[N-1] = b.values[N-1];
-        // b.values[N-1] = r.values[N-1];
-        // r.values[N-1] = tmp; 
 
         std::string tmp[N];
         std::copy(std::begin(f.values[N-1]), std::end(f.values[N-1]), std::begin(tmp));
@@ -192,12 +186,6 @@ struct D:Face<'D',N>
 
     void rotateAntiClockwise(Face<'F',N>& f, Face<'R',N>& r, Face<'B',N>& b, Face<'L',N>& l){
         rotateFaceAntiClockwise();
-
-        // std::string tmp[N] = f.values[N-1];
-        // f.values[N-1] = r.values[N-1];
-        // r.values[N-1] = b.values[N-1];
-        // b.values[N-1] = l.values[N-1];
-        // l.values[N-1] = tmp; 
 
         std::string tmp[N];
         std::copy(std::begin(f.values[N-1]), std::end(f.values[N-1]), std::begin(tmp));
@@ -218,12 +206,7 @@ struct U:Face<'U',N>
 
     void rotateClockwise(Face<'B',N>& b, Face<'R',N>& r, Face<'F',N>& f, Face<'L',N>& l){
         rotateFaceClockwise();
-
-        // std::string tmp[N] = b.values[0];
-        // b.values[0] = l.values[0];
-        // l.values[0] = f.values[0];
-        // f.values[0] = r.values[0];
-        // r.values[0] = tmp; 
+ 
         std::string tmp[N];
         std::copy(std::begin(b.values[0]), std::end(b.values[0]), std::begin(tmp));
         std::copy(std::begin(l.values[0]), std::end(l.values[0]), std::begin(b.values[0]));
@@ -234,13 +217,7 @@ struct U:Face<'U',N>
     }
 
     void rotateAntiClockwise(Face<'B',N>& b, Face<'R',N>& r, Face<'F',N>& f, Face<'L',N>& l){
-        rotateFaceAntiClockwise();
-
-        // std::string tmp[N] = b.values[0];
-        // b.values[0] = r.values[0];
-        // r.values[0] = f.values[0];
-        // f.values[0] = l.values[0];
-        // l.values[0] = tmp; 
+        rotateFaceAntiClockwise(); 
 
         std::string tmp[N];
         std::copy(std::begin(b.values[0]), std::end(b.values[0]), std::begin(tmp));
@@ -250,86 +227,3 @@ struct U:Face<'U',N>
         std::copy(std::begin(tmp), std::end(tmp), std::begin(l.values[0]));
     }
 };
-/*
-B Initial stage:
-
-        [0,2] [0,1] [0,0]
-
-    [0,2]               [0,0]
-    [1,2]               [0,1]
-    [2,2]               [0,2]
-
-        [2,2] [2,1] [2,0]
-
-B - Clockwise: U -> L -> D -> R -> U
-B - Anti-clockwise: U <- L <- D <- R <- U
-
-
-R Initial stage:
-
-        [2,2] [1,2] [0,2]
-
-    [0,2]               [0,0]
-    [1,2]               [1,0]
-    [2,2]               [2,0]
-
-        [0,2] [1,2] [2,2]
-
-R - Clockwise: U -> B -> D -> F -> U
-R - Anti-clockwise: U <- B <- D <- F <- U
-
-
-L Initial stage:
-
-        [0,0] [1,0] [2,0]
-
-    [0,2]               [0,0]
-    [1,2]               [1,0]
-    [2,2]               [2,0]
-
-        [2,0] [1,0] [0,0]
-
-L - Clockwise:  U -> F -> D -> B -> U
-L - Anti-clockwise: U <- F <- D <- B <- U
-
-
-F Initial stage:
-
-        [2,0] [2,1] [2,2]
-
-    [0,2]               [0,0]
-    [1,2]               [1,0]
-    [2,2]               [2,0]
-
-        [0,0] [0,1] [0,2]
-
-F - Clockwise: U -> R -> D -> L -> U
-F - Anti-clockwise: U <- R <- D <- L <- U
-
-
-D Initial stage:
-
-        [2,0] [2,1] [2,2]
-
-    [2,2]               [2,0]
-    [2,1]               [2,1]
-    [2,0]               [2,2]
-
-        [2,2] [2,1] [2,0]
-
-D - Clockwise: F -> R -> B -> L -> F
-D - Anti-clockwise: F <- R <- B <- L <- F
-
-U Initial stage:
-
-        [0,2] [0,1] [0,0]
-
-    [0,0]               [0,2]
-    [0,1]               [0,1]
-    [0,2]               [0,0]
-
-        [0,0] [0,1] [0,2]
-
-U - Clockwise: B -> R -> F -> L -> B
-U - Anti-clockwise: B <- R <- F <- L <- B
-*/
