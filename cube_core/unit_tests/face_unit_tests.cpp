@@ -18,6 +18,12 @@ TEST(FaceTest, ConstructorTest){
     EXPECT_EQ(expected_text, f_text);
 }
 
+TEST(FaceTest, EqualityTest){
+    Face<'X',3> f1{};
+    Face<'X',3> f2{};
+    EXPECT_TRUE(f1==f2);
+}
+
 TEST(FaceTest, ConstructorSpecializationTest){
     U<3> f{};
     std::stringstream ss;
