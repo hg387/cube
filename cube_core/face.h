@@ -46,6 +46,48 @@ struct Face
                 }
             }
         }
+
+        template <char c1, char c2>
+        void copyColToRowReverse(Face<c1,N>& f1, int col, Face<c2,N>& f2, int row){
+          for (int j=0; j!=N; ++j){
+            f2.values[row][N-1-j] = f1.values[j][col];
+          }
+        }
+
+        template <char c1, char c2>
+        void copyColToRow(Face<c1,N>& f1, int col, Face<c2,N>& f2, int row){
+          for (int j=0; j!=N; ++j){
+            f2.values[row][j] = f1.values[j][col];
+          }
+        }
+
+        template <char c1, char c2>
+        void copyRowToCol(Face<c1,N>& f1, int row, Face<c2,N>& f2, int col){
+          for (int i=0; i!=N; ++i){
+            f2.values[i][col] = f1.values[row][i];
+          }
+        }
+
+        template <char c1, char c2>
+        void copyRowToColReverse(Face<c1,N>& f1, int row, Face<c2,N>& f2, int col){
+          for (int i=0; i!=N; ++i){
+            f2.values[N-1-i][col] = f1.values[row][i];
+          }
+        }
+
+        template <char c1, char c2>
+        void copyColToCol(Face<c1,N>& f1, int col1, Face<c2,N>& f2, int col2){
+          for (int i=0; i!=N; ++i){
+            f2.values[i][col2] = f1.values[i][col1];
+          }
+        }
+
+        template <char c1, char c2>
+        void copyColToColReverse(Face<c1,N>& f1, int col1, Face<c2,N>& f2, int col2){
+          for (int i=0; i!=N; ++i){
+            f2.values[N-1-i][col2] = f1.values[i][col1];
+          }
+        }
 };
 
 template <char c, std::size_t n>

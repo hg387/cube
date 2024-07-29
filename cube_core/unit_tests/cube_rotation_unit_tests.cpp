@@ -40,3 +40,45 @@ TEST_F(CubeTest, DownRotationTest) {
     std::cout << D;
     EXPECT_EQ(0, 0);
 }
+
+TEST_F(CubeTest, FrontRotationTest) {
+    F.rotateClockwise(U, R, D, L);
+    // std::cout << U;
+    // std::cout << L;
+    // std::cout << F;
+    // std::cout << R;
+    // std::cout << B;
+    // std::cout << D;
+    F.rotateAntiClockwise(U, R, D, L);
+    std::cout << U;
+    std::cout << L;
+    std::cout << F;
+    std::cout << R;
+    std::cout << B;
+    std::cout << D;
+    EXPECT_EQ(0, 0);
+}
+
+TEST_F(CubeTest, LeftRotationTest) {
+    L.rotateClockwise(U, F, D, B);
+    L.rotateAntiClockwise(U, F, D, B);
+    std::cout << U;
+    std::cout << L;
+    std::cout << F;
+    std::cout << R;
+    std::cout << B;
+    std::cout << D;
+    EXPECT_EQ(0, 0);
+}
+
+TEST_F(CubeTest, RightRotationTest) {
+    R.rotateClockwise(U, B, D, F);
+    R.rotateAntiClockwise(U, B, D, F);
+    std::cout << U;
+    std::cout << L;
+    std::cout << F;
+    std::cout << R;
+    std::cout << B;
+    std::cout << D;
+    EXPECT_EQ(0, 0);
+}
