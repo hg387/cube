@@ -38,7 +38,7 @@ struct L:Face<'L',N>
         Face<'L',N>::template copyColToCol<'D','F'>(d, 0, f, 0);
         Face<'L',N>::template copyColToColReverse<'B','D'>(b, N-1, d, 0);
         for (int i=0; i!=N; ++i){
-            b.values[N-1-i][0] = tmp[i];
+            b.values[N-1-i][N-1] = tmp[i];
         }
     }
 

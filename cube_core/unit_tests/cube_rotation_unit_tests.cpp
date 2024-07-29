@@ -43,12 +43,6 @@ TEST_F(CubeTest, DownRotationTest) {
 
 TEST_F(CubeTest, FrontRotationTest) {
     F.rotateClockwise(U, R, D, L);
-    // std::cout << U;
-    // std::cout << L;
-    // std::cout << F;
-    // std::cout << R;
-    // std::cout << B;
-    // std::cout << D;
     F.rotateAntiClockwise(U, R, D, L);
     std::cout << U;
     std::cout << L;
