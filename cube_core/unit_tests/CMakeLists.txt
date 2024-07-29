@@ -8,5 +8,10 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
-add_executable(cube_core_unit_tests)
-target_link_libraries(cube_core_unit_tests PUBLIC gtest_main cube_core)
+enable_testing()
+
+add_executable(cube_core_unit_tests cube_core_unit_tests.cpp)
+target_link_libraries(cube_core_unit_tests PUBLIC cube_core GTest::gtest_main )
+target_compile_features(cube_core_unit_tests PUBLIC cxx_std_20)
+include(GoogleTest)
+gtest_add_tests(TARGET cube_core_unit_tests)
