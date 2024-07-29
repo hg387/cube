@@ -23,7 +23,7 @@ struct Face
         template <char c, std::size_t n>
         friend std::ostream& operator<<(std::ostream& os, const Face<c,n>& face);
 
-        void rotateFaceClockwise(){
+        void rotateFaceClockwise() noexcept{
           for (int i=0; i!=N/2; ++i){
                 for (int j=i; j!=N-i-1; ++j){
                   std::string tmp = values[i][j];
@@ -35,7 +35,7 @@ struct Face
             }
         }
 
-        void rotateFaceAntiClockwise(){
+        void rotateFaceAntiClockwise() noexcept{
           for (int i=0; i!=N/2; ++i){
                 for (int j=i; j!=N-i-1; ++j){
                   std::string tmp = values[i][j];
