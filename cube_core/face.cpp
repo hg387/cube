@@ -58,7 +58,7 @@ struct R:Face<'R',N>
 
         std::string tmp[N];
         for (int i=0; i!=N; ++i){
-            tmp[i] = u.values[N-1-i][N-1];
+            tmp[i] = u.values[i][N-1];
         }
         Face<'R',N>::template copyColToCol<'F','U'>(f, N-1, u, N-1);
         Face<'R',N>::template copyColToCol<'D','F'>(d, N-1, f, N-1);
@@ -75,13 +75,13 @@ struct R:Face<'R',N>
 
         std::string tmp[N];
         for (int i=0; i!=N; ++i){
-            tmp[i] = u.values[N-1-i][N-1];
+            tmp[i] = u.values[i][N-1];
         }
         Face<'R',N>::template copyColToColReverse<'B','U'>(b, 0, u, N-1);
         Face<'R',N>::template copyColToColReverse<'D','B'>(d, N-1, b, 0);
         Face<'R',N>::template copyColToCol<'F','D'>(f, N-1, d, N-1);
         for (int i=0; i!=N; ++i){
-            f.values[i][0] = tmp[i];
+            f.values[i][N-1] = tmp[i];
         }
     }
 };
