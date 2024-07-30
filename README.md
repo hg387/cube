@@ -97,7 +97,7 @@ A sample 5x5 face:
 */    
 
 # Instructions to build and run:
-1) This project is using CMake to build. Example CMake command to build the project, the command should be adjusted according to build environment:
+1) This project is using CMake to build. Also, some functions available in C++20 are used. Example CMake command to build the project, the command should be adjusted according to build environment:
 ```
 usr/bin/cmake -DCMAKE_INSTALL_PREFIX=</workspaces/cube/out/install/rubrick_cube> -DCMAKE_C_COMPILER=</usr/bin/clang> -DCMAKE_CXX_COMPILER=</usr/bin/clang++> -DCMAKE_BUILD_TYPE=<Debug> <-S/workspaces/cube> <-B/workspaces/cube/out/build/rubrick_cube>
 ```
@@ -108,7 +108,7 @@ usr/bin/cmake -DCMAKE_INSTALL_PREFIX=</workspaces/cube/out/install/rubrick_cube>
 ```
 
 # Instructions to build and run tests:
-1) We are using Google Test to create unit tests. Example CMake command to build the project, the command should be adjusted according to build environment:
+1) We are using Google Test to create unit tests. Also, some functions available in C++20 are used. Example CMake command to build the project, the command should be adjusted according to build environment:
 ```
 /usr/bin/cmake --build </workspaces/cube/out/build/rubrick_cube> --parallel 4 --
 ``` 
