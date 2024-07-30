@@ -1,14 +1,15 @@
 # Cube
-
+```
 U = Up Face
 L = Left Face
 F = Front Face
 R = Right Face
 B = Back Face
 D = Down Face
-
+```
 /*    
 A sample 3x3 face:   
+```
 +------------+    
 | X1  X2  X3 |   
 |            |   
@@ -16,10 +17,12 @@ A sample 3x3 face:
 |            |   
 | X7  X8  X9 |   
 +------------+    
+```
 */    
 
 # State representation:
-/*     
+/* 
+```    
              +------------+    
              | U1  U2  U3 |    
              |            |     
@@ -39,6 +42,7 @@ A sample 3x3 face:
              |            |         
              | D7  D8  D9 |     
              +------------+      
+```
 */    
 
 # Instructions to build and run:
@@ -64,7 +68,8 @@ cd </workspaces/cube/out/build/rubrick_cube> && /usr/bin/ctest
 ```
 
 # Approach for rotations:
-/*     
+/* 
+```    
 B Initial stage:     
                 U         
         [0,2] [0,1] [0,0]     
@@ -77,8 +82,8 @@ B Initial stage:
                 D      
 B - Clockwise: U -> L -> D -> R -> U      
 B - Anti-clockwise: U <- L <- D <- R <- U      
-      
-      
+```      
+```      
 R Initial stage:      
                 U      
         [2,2] [1,2] [0,2]      
@@ -91,8 +96,8 @@ R Initial stage:
                 D      
 R - Clockwise: U -> B -> D -> F -> U      
 R - Anti-clockwise: U <- B <- D <- F <- U      
-         
-         
+```         
+```         
 L Initial stage:      
                 U      
         [0,0] [1,0] [2,0]      
@@ -105,8 +110,8 @@ L Initial stage:
                 D      
 L - Clockwise:  U -> F -> D -> B -> U      
 L - Anti-clockwise: U <- F <- D <- B <- U        
-      
-       
+```      
+```       
 F Initial stage:      
                 U      
         [2,0] [2,1] [2,2]      
@@ -119,8 +124,8 @@ F Initial stage:
                 D      
 F - Clockwise: U -> R -> D -> L -> U      
 F - Anti-clockwise: U <- R <- D <- L <- U      
-      
-      
+```      
+```   
 D Initial stage:      
                 F      
         [2,0] [2,1] [2,2]      
@@ -133,7 +138,8 @@ D Initial stage:
                 B      
 D - Clockwise: F -> R -> B -> L -> F      
 D - Anti-clockwise: F <- R <- B <- L <- F      
-      
+```
+```      
 U Initial stage:      
                 B      
         [0,2] [0,1] [0,0]      
@@ -146,4 +152,5 @@ U Initial stage:
                 F      
 U - Clockwise: B -> R -> F -> L -> B      
 U - Anti-clockwise: B <- R <- F <- L <- B      
+```
 */      
