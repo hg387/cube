@@ -25,15 +25,6 @@ TEST(FaceTest, EqualityTest){
     EXPECT_TRUE(f1==f2);
 }
 
-TEST(FaceTest, DifferentSizeTest){
-    //Face<'X',6> f1{};
-    Face<'X',7> f2{};
-    //std::cout << f1;
-    std::cout << f2;
-    EXPECT_TRUE(true);
-}
-
-
 TEST(FaceTest, ConstructorSpecializationTest){
     U<3> f{};
     std::stringstream ss;
