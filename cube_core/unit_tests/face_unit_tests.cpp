@@ -1,11 +1,11 @@
 #include "gtest/gtest.h"
-#include "../face.h"
 #include "../face.cpp"
 #include <sstream>
 #include <string>
 
-TEST(FaceTest, ConstructorTest){
-    Face<'X',3> f{};
+TEST(FaceTest, ConstructorTest)
+{
+    Face<'X', 3> f{};
     std::stringstream ss;
     ss << f;
     std::string f_text = ss.str();
@@ -19,13 +19,15 @@ TEST(FaceTest, ConstructorTest){
     EXPECT_EQ(expected_text, f_text);
 }
 
-TEST(FaceTest, EqualityTest){
-    Face<'X',3> f1{};
-    Face<'X',3> f2{};
-    EXPECT_TRUE(f1==f2);
+TEST(FaceTest, EqualityTest)
+{
+    Face<'X', 3> f1{};
+    Face<'X', 3> f2{};
+    EXPECT_TRUE(f1 == f2);
 }
 
-TEST(FaceTest, ConstructorSpecializationTest){
+TEST(FaceTest, ConstructorSpecializationTest)
+{
     U<3> f{};
     std::stringstream ss;
     ss << f;
@@ -40,8 +42,9 @@ TEST(FaceTest, ConstructorSpecializationTest){
     EXPECT_EQ(expected_text, f_text);
 }
 
-TEST(FaceTest, FaceClockwiseTest){
-    Face<'X',3> f{};
+TEST(FaceTest, FaceClockwiseTest)
+{
+    Face<'X', 3> f{};
     f.rotateFaceClockwise();
     std::stringstream ss;
     ss << f;
@@ -56,8 +59,9 @@ TEST(FaceTest, FaceClockwiseTest){
     EXPECT_EQ(expected_text, f_text);
 }
 
-TEST(FaceTest, FaceAntiClockwiseTest){
-    Face<'X',3> f{};
+TEST(FaceTest, FaceAntiClockwiseTest)
+{
+    Face<'X', 3> f{};
     f.rotateFaceAntiClockwise();
     std::stringstream ss;
     ss << f;
@@ -72,8 +76,9 @@ TEST(FaceTest, FaceAntiClockwiseTest){
     EXPECT_EQ(expected_text, f_text);
 }
 
-TEST(FaceTest, FaceRotationTest){
-    Face<'X',3> f{};
+TEST(FaceTest, FaceRotationTest)
+{
+    Face<'X', 3> f{};
     f.rotateFaceClockwise();
     f.rotateFaceAntiClockwise();
     std::stringstream ss;
