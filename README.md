@@ -67,6 +67,27 @@ usr/bin/cmake -DCMAKE_INSTALL_PREFIX=</workspaces/cube/out/install/rubrick_cube>
 cd </workspaces/cube/out/build/rubrick_cube> && /usr/bin/ctest
 ```
 
+# Approach for face rotation:
+/*
+Converting rotated block based on some matrix rotation shown below:     
+```
+   j                  i
+ ******            ********
+ * +---------------------+*
+i* |                     |*j
+ * |                     |*
+   |                     |
+   |                     |
+   |                     |
+   |                     |*
+ * |                     |*
+j* |                     |*i
+ * +---------------------+*
+ ******             *******
+   i                   j
+```
+*/
+
 # Approach for rotations:
 /* 
 ```    

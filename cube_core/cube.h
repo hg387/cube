@@ -21,7 +21,7 @@ struct Cube{
     template <std::size_t n>
     friend std::ostream& operator<<(std::ostream& os, const Cube<n>& cube);
 
-    void make_move(char face, int rotation){
+    void make_move(char face, int rotation) noexcept{
         if (!faces.contains(face) || !rotations.contains(rotation)) return;
 
         switch (face) {
