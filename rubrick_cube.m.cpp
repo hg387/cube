@@ -11,7 +11,7 @@ const std::string INPUTS =  "\nInstructions:\n"
                             "1 - Anti-clockwise Rotation\n\n";
 
 
-const std::unordered_set<char> faces{'U', 'L', 'F', 'B', 'R', 'D'};
+const std::unordered_set<std::string> faces{"U", "L", "F", "B", "R", "D"};
 int main()
 {
     std::cout << WELCOME;
@@ -19,7 +19,7 @@ int main()
     std::cout << cube;
     std::cout << INPUTS;
 
-    char face;
+    std::string face;
     int action;
 
     while (true){

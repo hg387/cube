@@ -5,7 +5,7 @@
 
 template <size_t N>
 struct Cube{
-    inline static const std::unordered_set<char> faces{'U', 'L', 'F', 'B', 'R', 'D'};
+    inline static const std::unordered_set<std::string> faces{"U", "L", "F", "B", "R", "D"};
     inline static const std::unordered_set<int> rotations{0, 1};
 
     Cube(){
@@ -21,34 +21,32 @@ struct Cube{
     template <std::size_t n>
     friend std::ostream& operator<<(std::ostream& os, const Cube<n>& cube);
 
-    void make_move(char face, int rotation) noexcept{
+    void make_move(std::string face, int rotation) noexcept{
         if (!faces.contains(face) || !rotations.contains(rotation)) return;
 
-        switch (face) {
-            case 'U':
-                if (rotation == 0) U.rotateClockwise(B, R, F, L);
-                else U.rotateAntiClockwise(B, R, F, L);
-                break;
-            case 'D':
-                if (rotation == 0) D.rotateClockwise(F, R, B, L);
-                else D.rotateAntiClockwise(F, R, B, L);
-                break;
-            case 'F':
-                if (rotation == 0) F.rotateClockwise(U, R, D, L);
-                else F.rotateAntiClockwise(U, R, D, L);
-                break;
-            case 'L':
-                if (rotation == 0) L.rotateClockwise(U, F, D, B);
-                else L.rotateAntiClockwise(U, F, D, B);
-                break;
-            case 'R':
-                if (rotation == 0) R.rotateClockwise(U, B, D, F);
-                else R.rotateAntiClockwise(U, B, D, F);
-                break;
-            case 'B':
-                if (rotation == 0) B.rotateClockwise(U, L, D, R);
-                else B.rotateAntiClockwise(U, L, D, R);
-                break;
+        if (face == "U"){
+            if (rotation == 0) U.rotateClockwise(B, R, F, L);
+            else U.rotateAntiClockwise(B, R, F, L);
+        }
+        else if (face == "D"){
+            if (rotation == 0) D.rotateClockwise(F, R, B, L);
+            else D.rotateAntiClockwise(F, R, B, L);
+        }
+        else if (face == "F"){
+            if (rotation == 0) F.rotateClockwise(U, R, D, L);
+            else F.rotateAntiClockwise(U, R, D, L);
+        }
+        else if (face == "L"){
+            if (rotation == 0) L.rotateClockwise(U, F, D, B);
+            else L.rotateAntiClockwise(U, F, D, B);
+        }
+        else if (face == "R"){
+            if (rotation == 0) R.rotateClockwise(U, B, D, F);
+            else R.rotateAntiClockwise(U, B, D, F);
+        }
+        else if (face == "B"){
+            if (rotation == 0) B.rotateClockwise(U, L, D, R);
+            else B.rotateAntiClockwise(U, L, D, R);
         }
     }
 };

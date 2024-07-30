@@ -14,12 +14,12 @@ class CubeTest: public testing::Test{
 };
 
 TEST_F(CubeTest, CubeClockwiseAntiClockwiseTest){
-    cube.make_move('U',0);
-    cube.make_move('D',0);
-    cube.make_move('L',1);
-    cube.make_move('L',0);
-    cube.make_move('D',1);
-    cube.make_move('U',1);
+    cube.make_move("U",0);
+    cube.make_move("D",0);
+    cube.make_move("L",1);
+    cube.make_move("L",0);
+    cube.make_move("D",1);
+    cube.make_move("U",1);
 
     EXPECT_TRUE(UInit==cube.U);
     EXPECT_TRUE(LInit==cube.L);
