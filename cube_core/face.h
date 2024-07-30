@@ -102,21 +102,24 @@ struct Face
 
 template <char c, std::size_t n>
 std::ostream& operator<<(std::ostream& os, const Face<c,n>& face){
-    os << "+" << std::setfill('-') << std::setw(4*n+1) << "+" << std::endl;
+    int digits = std::to_string(n*n).size();
+    os << "+" << std::setfill('-') << std::setw(((3+digits)*n)+1) << "+" << std::endl;
     for (int i=0; i!=n; ++i){
         os << "| ";
         for (int j=0; j!=n; ++j){
-            if (j != 0) os << std::setfill(' ') << std::setw(4) << face.values[i][j];
-            else os << face.values[i][j];      
+            if (j != 0) os << std::setfill(' ') << std::setw(3+digits) << std::right << face.values[i][j];
+            else os << std::setfill(' ') << std::setw(1+digits) << std::right << face.values[i][j];      
         }
         os << " |" << std::endl;
+        if (i != (n-1)) os << "|" << std::setfill(' ') << std::setw(((3+digits)*n)+1) << "|" << std::endl;
     }
-    os << "+" << std::setfill('-') << std::setw(4*n+1) << "+" << std::endl; 
+    os << "+" << std::setfill('-') << std::setw(((3+digits)*n)+1) << "+" << std::endl; 
 
     return os;
 }
 
 /*
+State representation:
                 +------------+
  1              | U1  U2  U3 |
                 |            |

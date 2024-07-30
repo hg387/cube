@@ -10,7 +10,7 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
-add_executable(cube_core_unit_tests face_unit_tests.cpp cube_rotation_unit_tests.cpp)
+add_executable(cube_core_unit_tests face_unit_tests.cpp cube_rotation_unit_tests.cpp cube_core_unit_tests.cpp)
 target_link_libraries(cube_core_unit_tests PUBLIC cube_core GTest::gtest_main )
 target_compile_features(cube_core_unit_tests PUBLIC cxx_std_20)
 include(GoogleTest)

@@ -3,9 +3,9 @@
 #include "../face.cpp"
 
 
-class CubeTest: public testing::Test{
+class RotationTest: public testing::Test{
     protected:
-        CubeTest(){
+        RotationTest(){
 
         }
 
@@ -24,7 +24,7 @@ class CubeTest: public testing::Test{
         ::R<3> RInit{};
 };
 
-TEST_F(CubeTest, UpRotationTest) {
+TEST_F(RotationTest, UpRotationTest) {
     U.rotateClockwise(B, R, F, L);
     U.rotateAntiClockwise(B, R, F, L);
     EXPECT_TRUE(UInit==U);
@@ -35,7 +35,7 @@ TEST_F(CubeTest, UpRotationTest) {
     EXPECT_TRUE(DInit==D);
 }
 
-TEST_F(CubeTest, DownRotationTest) {
+TEST_F(RotationTest, DownRotationTest) {
     D.rotateClockwise(F, R, B, L);
     D.rotateAntiClockwise(F, R, B, L);
     EXPECT_TRUE(UInit==U);
@@ -46,7 +46,7 @@ TEST_F(CubeTest, DownRotationTest) {
     EXPECT_TRUE(DInit==D);
 }
 
-TEST_F(CubeTest, FrontRotationTest) {
+TEST_F(RotationTest, FrontRotationTest) {
     F.rotateClockwise(U, R, D, L);
     F.rotateAntiClockwise(U, R, D, L);
     EXPECT_TRUE(UInit==U);
@@ -57,7 +57,7 @@ TEST_F(CubeTest, FrontRotationTest) {
     EXPECT_TRUE(DInit==D);
 }
 
-TEST_F(CubeTest, LeftRotationTest) {
+TEST_F(RotationTest, LeftRotationTest) {
     L.rotateClockwise(U, F, D, B);
     L.rotateAntiClockwise(U, F, D, B);
     EXPECT_TRUE(UInit==U);
@@ -68,7 +68,7 @@ TEST_F(CubeTest, LeftRotationTest) {
     EXPECT_TRUE(DInit==D);
 }
 
-TEST_F(CubeTest, RightRotationTest) {
+TEST_F(RotationTest, RightRotationTest) {
     R.rotateClockwise(U, B, D, F);
     R.rotateAntiClockwise(U, B, D, F);
     EXPECT_TRUE(UInit==U);
@@ -79,7 +79,7 @@ TEST_F(CubeTest, RightRotationTest) {
     EXPECT_TRUE(DInit==D);
 }
 
-TEST_F(CubeTest, BackRotationTest) {
+TEST_F(RotationTest, BackRotationTest) {
     B.rotateClockwise(U, L, D, R);
     B.rotateAntiClockwise(U, L, D, R);
     EXPECT_TRUE(UInit==U);
