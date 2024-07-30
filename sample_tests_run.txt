@@ -1,0 +1,156 @@
+Running main() from /workspaces/cube/out/build/rubrick_cube/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = FaceTest.ConstructorTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FaceTest
+[ RUN      ] FaceTest.ConstructorTest
+[       OK ] FaceTest.ConstructorTest (0 ms)
+[----------] 1 test from FaceTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+Running main() from /workspaces/cube/out/build/rubrick_cube/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = FaceTest.EqualityTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FaceTest
+[ RUN      ] FaceTest.EqualityTest
+[       OK ] FaceTest.EqualityTest (0 ms)
+[----------] 1 test from FaceTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+Running main() from /workspaces/cube/out/build/rubrick_cube/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = FaceTest.ConstructorSpecializationTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FaceTest
+[ RUN      ] FaceTest.ConstructorSpecializationTest
+[       OK ] FaceTest.ConstructorSpecializationTest (0 ms)
+[----------] 1 test from FaceTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+Running main() from /workspaces/cube/out/build/rubrick_cube/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = FaceTest.FaceClockwiseTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FaceTest
+[ RUN      ] FaceTest.FaceClockwiseTest
+[       OK ] FaceTest.FaceClockwiseTest (0 ms)
+[----------] 1 test from FaceTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+Running main() from /workspaces/cube/out/build/rubrick_cube/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = FaceTest.FaceAntiClockwiseTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FaceTest
+[ RUN      ] FaceTest.FaceAntiClockwiseTest
+[       OK ] FaceTest.FaceAntiClockwiseTest (0 ms)
+[----------] 1 test from FaceTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+Running main() from /workspaces/cube/out/build/rubrick_cube/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = FaceTest.FaceRotationTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FaceTest
+[ RUN      ] FaceTest.FaceRotationTest
+[       OK ] FaceTest.FaceRotationTest (0 ms)
+[----------] 1 test from FaceTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+Running main() from /workspaces/cube/out/build/rubrick_cube/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = RotationTest.UpRotationTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from RotationTest
+[ RUN      ] RotationTest.UpRotationTest
+[       OK ] RotationTest.UpRotationTest (0 ms)
+[----------] 1 test from RotationTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+Running main() from /workspaces/cube/out/build/rubrick_cube/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = RotationTest.DownRotationTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from RotationTest
+[ RUN      ] RotationTest.DownRotationTest
+[       OK ] RotationTest.DownRotationTest (0 ms)
+[----------] 1 test from RotationTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+Running main() from /workspaces/cube/out/build/rubrick_cube/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = RotationTest.FrontRotationTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from RotationTest
+[ RUN      ] RotationTest.FrontRotationTest
+[       OK ] RotationTest.FrontRotationTest (0 ms)
+[----------] 1 test from RotationTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+Running main() from /workspaces/cube/out/build/rubrick_cube/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = RotationTest.LeftRotationTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from RotationTest
+[ RUN      ] RotationTest.LeftRotationTest
+[       OK ] RotationTest.LeftRotationTest (0 ms)
+[----------] 1 test from RotationTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+Running main() from /workspaces/cube/out/build/rubrick_cube/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = RotationTest.RightRotationTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from RotationTest
+[ RUN      ] RotationTest.RightRotationTest
+[       OK ] RotationTest.RightRotationTest (0 ms)
+[----------] 1 test from RotationTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+Running main() from /workspaces/cube/out/build/rubrick_cube/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = RotationTest.BackRotationTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from RotationTest
+[ RUN      ] RotationTest.BackRotationTest
+[       OK ] RotationTest.BackRotationTest (0 ms)
+[----------] 1 test from RotationTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+Running main() from /workspaces/cube/out/build/rubrick_cube/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = CubeTest.CubeClockwiseAntiClockwiseTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CubeTest
+[ RUN      ] CubeTest.CubeClockwiseAntiClockwiseTest
+[       OK ] CubeTest.CubeClockwiseAntiClockwiseTest (0 ms)
+[----------] 1 test from CubeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
